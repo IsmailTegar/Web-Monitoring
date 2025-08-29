@@ -9,9 +9,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $ip = '192.168.100.2';
-        $user = 'Ismail';
-        $pass = 'tegar';
+        $ip = '192.168.100.1';
+        $user = 'admin';
+        $pass = '12345';
         $API = new RouterOsAPI();
         $API->debug('false');
 
