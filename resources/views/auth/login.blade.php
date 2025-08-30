@@ -19,28 +19,31 @@
                 </p>
               </div>
             </div>
-            <div class="frame-4">
-              <div class="frame-5"><div class="text-wrapper-2">Login</div></div>
-              <div class="frame-6">
-                <div class="frame-7">
-                  <div class="input-box">
-                    <div class="frame-8"><div class="text-wrapper-3">IP Address</div></div>
-                    <input type="text" placeholder="Name" class="input-custom">
-                  </div>
-                  <div class="input-box">
-                    <div class="frame-8"><div class="text-wrapper-3">User Name</div></div>
-                    <div class="frame-9"><div class="text-wrapper-4">Name</div></div>
-                  </div>
-                  <div class="input-box">
-                    <div class="frame-8"><div class="text-wrapper-3">Password</div></div>
-                    <div class="frame-9"><div class="text-wrapper-4">Password</div></div>
+              <form action="{{ route('login.post') }}" method="POST">
+                @csrf
+                <div class="frame-4">
+                  <div class="frame-5"><div class="text-wrapper-2">Login</div></div>
+                  <div class="frame-6">
+                    <div class="frame-7">
+                      <div class="input-box">
+                        <div class="frame-8"><div class="text-wrapper-3">IP Address</div></div>
+                        <input type="text" placeholder="IP Address" class="input-custom">
+                      </div>
+                      <div class="input-box">
+                        <div class="frame-8"><div class="text-wrapper-3">User Name</div></div>
+                        <input type="text" placeholder="Name" class="input-custom">
+                      </div>
+                      <div class="input-box">
+                        <div class="frame-8"><div class="text-wrapper-3">Password</div></div>
+                        <input type="password" placeholder="Password" class="input-custom">
+                      </div>
+                    </div>
+                    <button class="button-wrapper">
+                      <button type="d" class="button">Button</button>
+                    </button>
                   </div>
                 </div>
-                <button class="button-wrapper">
-                  <button class="button"><button class="button-2">Submit</button></button>
-                </button>
-              </div>
-            </div>
+              </form>
           </div>
         </div>
       </div>

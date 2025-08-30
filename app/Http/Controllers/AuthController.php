@@ -6,8 +6,26 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function login()
+    public function index()
     {
         return view('auth.login');
+    }
+
+    public function login(Request $request)
+    {
+        $ip = $request->post('ip');
+        $user = $request->post('user');
+        $pass = $request->post('pass');
+
+        $data = [
+            'ip' => $ip,
+            'user' => $user,
+            'pass' => $pass,
+        ];
+
+        $request-session()->put($data);
+
+        return redirect()->route('dashboard');
+        
     }
 }
