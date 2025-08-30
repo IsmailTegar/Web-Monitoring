@@ -27,20 +27,20 @@
                     <div class="frame-7">
                       <div class="input-box">
                         <div class="frame-8"><div class="text-wrapper-3">IP Address</div></div>
-                        <input type="text" placeholder="IP Address" class="input-custom">
+                        <input type="text" placeholder="IP Address" class="input-custom" name="ip">
                       </div>
                       <div class="input-box">
                         <div class="frame-8"><div class="text-wrapper-3">User Name</div></div>
-                        <input type="text" placeholder="Name" class="input-custom">
+                        <input type="text" placeholder="Name" class="input-custom" name="user">
                       </div>
                       <div class="input-box">
                         <div class="frame-8"><div class="text-wrapper-3">Password</div></div>
-                        <input type="password" placeholder="Password" class="input-custom">
+                        <input type="password" placeholder="Password" class="input-custom" name="pass">
                       </div>
                     </div>
-                    <button class="button-wrapper">
-                      <button type="d" class="button">Button</button>
-                    </button>
+                    <div class="button-wrapper">
+                      <button type="submit" class="button">Button</button>
+                    </div>
                   </div>
                 </div>
               </form>

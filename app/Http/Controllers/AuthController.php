@@ -23,7 +23,7 @@ class AuthController extends Controller
             'pass' => $pass,
         ];
 
-        $request-session()->put($data);
+        $request->session()->put($data);
 
         return redirect()->route('dashboard');
         
