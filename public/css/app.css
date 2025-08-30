@@ -1,0 +1,319 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+.login {
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  width: 100vw;
+}
+
+.login .frame-wrapper {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+}
+
+.login .frame {
+  flex-direction: column;
+  width: 1160px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 80px 60px;
+  top: 173px;
+  left: 140px;
+  background-color: var(--secondary);
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+}
+
+.login .rectangle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.login .div {
+  width: 1040px;
+  align-items: flex-start;
+  gap: 221px;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .frame-2 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+.login .div-wrapper {
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+.login .text-wrapper {
+  position: relative;
+  flex: 1;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .frame-3 {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+
+.login .p {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .frame-4 {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  flex: 1;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+}
+
+.login .frame-5 {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 10px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .frame-6 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .frame-7 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.login .frame-8 {
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .frame-9 {
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  background-color: #e1e1e1;
+  border-radius: 50px;
+  display: flex;
+  position: relative;
+}
+
+.login .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000b2;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.login .button-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.login .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #184364;
+  border-radius: 100px;
+}
+
+.login .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+:root {
+  --secondary: rgba(24, 67, 100, 1);
+  --tertiary: rgba(229, 227, 255, 1);
+  --primary: var(--variable-collection-primary);
+  --elips-new: var(--variable-collection-elips);
+  --variable-collection-tertiary: rgba(229, 227, 255, 1);
+  --variable-collection-secondary: rgba(97, 85, 245, 1);
+  --variable-collection-primary: rgba(3, 0, 45, 1);
+  --variable-collection-elips: rgba(255, 255, 255, 1);
+  --variable-collection-color: rgba(141, 144, 146, 1);
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+
+.input-custom {
+    width: 500px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #e5e5e5;
+    outline: none;
+}
