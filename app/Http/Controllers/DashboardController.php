@@ -9,9 +9,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $ip = '192.168.100.1';
-        $user = 'admin';
-        $pass = '12345';
+        $ip = session()->get('ip');
+        $user = session()->get('user');
+        $pass = session()->get('pass');
         $API = new RouterOsAPI();
         $API->debug('false');
 
@@ -21,8 +21,12 @@ class DashboardController extends Controller
             return'Koneksi Gagal';
         }
 
-        dd($identitas);
+        $data = [
+            'identitas' => $identitas[0]['name'],
+        ];
 
-        return view('dashboard');
+        //dd($identitas);
+
+        return view('dashboard' , $data);
     }
 }
