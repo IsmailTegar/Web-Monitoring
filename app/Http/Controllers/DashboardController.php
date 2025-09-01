@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $ip = session()->get('ip');
+        /*$ip = session()->get('ip');
         $user = session()->get('user');
         $pass = session()->get('pass');
         $API = new RouterOsAPI();
@@ -23,10 +23,10 @@ class DashboardController extends Controller
 
         $data = [
             'identitas' => $identitas[0]['name'],
-        ];
+        ]; */
 
         //dd($identitas);
 
-        return view('dashboard' , $data);
+        return view('layouts.master');
     }
 }
