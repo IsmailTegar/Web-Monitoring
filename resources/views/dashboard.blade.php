@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="main-panel">
+  <div class="main-panel">
    <div class="content">
     <div class="container-content">
     <main class="frame">
@@ -72,5 +72,5 @@
     </main>
     </div>
    </div>
-</div>
+ </div>
 @endsection
