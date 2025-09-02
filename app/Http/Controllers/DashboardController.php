@@ -27,6 +27,6 @@ class DashboardController extends Controller
 
         //dd($identitas);
 
-        return view('layouts.master');
+        return view('dashboard');
     }
 }

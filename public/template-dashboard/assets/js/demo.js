@@ -15,19 +15,6 @@ Circles.create({
 	styleText:    true
 })
 
-//Notify
-$.notify({
-	icon: 'flaticon-alarm-1',
-	title: 'Atlantis',
-	message: 'Premium Bootstrap 4 Admin Dashboard',
-},{
-	type: 'secondary',
-	placement: {
-		from: "bottom",
-		align: "right"
-	},
-	time: 1000,
-});
 
 // JQVmap
 $('#map-example').vectorMap(
@@ -60,7 +47,7 @@ var statisticsChart = new Chart(ctx, {
 	data: {
 		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 		datasets: [ {
-			label: "Subscribers",
+			label: "Downloads",
 			borderColor: '#f3545d',
 			pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
 			pointRadius: 0,
@@ -70,7 +57,7 @@ var statisticsChart = new Chart(ctx, {
 			borderWidth: 2,
 			data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374]
 		}, {
-			label: "New Visitors",
+			label: "Uploads",
 			borderColor: '#fdaf4b',
 			pointBackgroundColor: 'rgba(253, 175, 75, 0.6)',
 			pointRadius: 0,
@@ -79,16 +66,6 @@ var statisticsChart = new Chart(ctx, {
 			fill: true,
 			borderWidth: 2,
 			data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521]
-		}, {
-			label: "Active Users",
-			borderColor: '#177dff',
-			pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
-			pointRadius: 0,
-			backgroundColor: 'rgba(23, 125, 255, 0.4)',
-			legendColor: '#177dff',
-			fill: true,
-			borderWidth: 2,
-			data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
 		}]
 	},
 	options : {

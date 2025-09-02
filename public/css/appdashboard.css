@@ -1,0 +1,521 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  width: 1143px;
+  align-items: flex-start;
+  gap: 100px;
+  position: relative;
+}
+
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-color);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 30px 30px 60px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-4 {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .card-dashboard {
+  margin-left: -2.50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .text-wrapper-4 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--secondary);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-5 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .text-wrapper-5 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--secondary);
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .ellipse-wrapper {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 auto;
+}
+
+.frame .ellipse {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #00ff1d;
+  border-radius: 7.5px;
+  aspect-ratio: 1;
+}
+
+.frame .card-dashboard-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .card-dashboard-3 {
+  margin-right: -2.50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .chart {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 640px;
+  margin-bottom: -24.00px;
+  margin-left: -20.00px;
+  margin-right: -20.00px;
+}
+/* Original CSS code should be injected here */
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  max-width: 1143px;
+  width: 100%;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+.frame .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-color);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #ffffff;
+}
+
+.frame .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-4 {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.frame .card-dashboard {
+  margin-left: -2.50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  min-width: 200px;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .text-wrapper-4 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--secondary);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-5 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.frame .text-wrapper-5 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 400;
+  color: var(--secondary);
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .ellipse-wrapper {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 auto;
+}
+
+.frame .ellipse {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #00ff1d;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.frame .card-dashboard-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  min-width: 200px;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .card-dashboard-3 {
+  margin-right: -2.50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  min-width: 200px;
+  margin-top: -2.50px;
+  margin-bottom: -2.50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+  box-shadow: 0px 4px 15px #00000026;
+}
+
+.frame .chart {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  max-height: 640px;
+  height: auto;
+  margin-bottom: -24.00px;
+  margin-left: -20.00px;
+  margin-right: -20.00px;
+}
+
+@media (max-width: 768px) {
+  .frame .div-4 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .frame .card-dashboard,
+  .frame .card-dashboard-2,
+  .frame .card-dashboard-3 {
+    margin: 0;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .frame .div-2 {
+    padding: 20px;
+    gap: 40px;
+  }
+}
+
+:root {
+  --secondary: rgba(24, 67, 100, 1);
+  --tertiary: rgba(229, 227, 255, 1);
+  --primary: var(--variable-collection-primary);
+  --elips-new: var(--variable-collection-elips);
+  --gray-3: rgba(141, 144, 146, 1);
+  --blue-1: rgba(52, 179, 241, 1);
+  --variable-collection-tertiary: rgba(229, 227, 255, 1);
+  --variable-collection-secondary: rgba(97, 85, 245, 1);
+  --variable-collection-primary: rgba(3, 0, 45, 1);
+  --variable-collection-elips: rgba(255, 255, 255, 1);
+  --variable-collection-color: rgba(141, 144, 146, 1);
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+.container-content{
+    margin-left: 50px;
+    margin-top: 50px;
+}

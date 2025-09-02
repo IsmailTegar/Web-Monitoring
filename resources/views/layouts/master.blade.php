@@ -2,6 +2,6 @@
 
 @include('layouts.sidebar')
 
-<div class="main-panel">
-    <h1></h1>
-</div>
+@yield('content')
+
+@include('layouts.footer')
