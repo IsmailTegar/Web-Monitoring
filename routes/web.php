@@ -18,3 +18,8 @@ Route::get('/hostpot', [UserController::class, 'index'])->name('users.index');
 Route::get('/notification', function() {
     return view('notification');
 });
+Route::get('/notification', function() {
+    return view('notification');
+});
+
+
