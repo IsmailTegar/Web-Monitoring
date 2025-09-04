@@ -8,7 +8,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        // contoh data, nanti ganti dengan hasil API Mikrotik
         $users = [
             [
                 "no" => 1,
@@ -38,3 +37,4 @@ class UserController extends Controller
         return view('hostpot', compact('users'));
     }
 }
+

@@ -19,7 +19,6 @@
 						<li class="nav-item active">
 							<a href="/Akses" aria-expanded="false">
 								<p>Akses Terlarang</p>
-								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
@@ -38,7 +37,7 @@
 						</li>
 						
 						<li class="nav-item active">
-							<a data-toggle="collapse" href="/notification" class="collapsed" aria-expanded="false">
+							<a href="/notification" class="collapsed">
 								<p>Notification</p>
 							</a>
 						</li>
