@@ -34,7 +34,7 @@ class UserController extends Controller
             
         ];
 
-        return view('hostpot', compact('users'));
+        return view('hotspot.hostpot', compact('users'));
     }
 }
 
