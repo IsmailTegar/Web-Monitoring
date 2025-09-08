@@ -4,9 +4,6 @@
 </div>
 @endif
 
-
-
-
 <style>
 /* Notif full width, height auto, centered text, besar font */
 .error-notif {
@@ -47,7 +44,7 @@
         if(notif){
             setTimeout(() => {
                 notif.style.display = 'none';
-            }, 4000); // 4 detik sesuai durasi animasi total
+            }, 5000); // 4 detik sesuai durasi animasi total
         }
     });
 </script>
@@ -70,7 +67,7 @@
               <div class="div-wrapper"><div class="text-wrapper">Welcome!</div></div>
               <div class="frame-3">
                 <p class="p">
-                  Proin id ligula dictum, convallis enim ut, facilisis massa. Mauris a nisi ut sapien blandit imperdie
+                  Admin Telah Datang, SELAMAT DATANG ADMIN!!!!!
                 </p>
               </div>
             </div>

@@ -7,7 +7,7 @@
     <main class="frame">
       <header class="div">
         <h1 class="text-wrapper">Dashboard</h1>
-        <p class="text-wrapper-2">Dashboard</p>
+        <p class="text-wrapper-2">Mikrotik Name : {{ $identitas }}</p>
       </header>
       <div class="div-2">
         <section class="div-3">
@@ -21,7 +21,7 @@
               </div>
               <div class="div-5">
                 <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="20 online users">20</span>
+                  <span class="text-wrapper-5" aria-label="20 online users">{{ $online_users }}</span>
                 </div>
                 <div class="ellipse-wrapper">
                   <div class="ellipse" role="img" aria-label="Online status indicator"></div>
@@ -34,7 +34,7 @@
               </div>
               <div class="div-5">
                 <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="100 total users">100</span>
+                  <span class="text-wrapper-5" aria-label="100 total users">{{ $total_users }}</span>
                 </div>
               </div>
             </article>
@@ -44,7 +44,7 @@
               </div>
               <div class="div-5">
                 <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="8 blocked IP addresses">8</span>
+                  <span class="text-wrapper-5" aria-label="8 blocked IP addresses">{{ $blocked_ip }}</span>
                 </div>
               </div>
             </article>
@@ -54,7 +54,7 @@
               </div>
               <div class="div-5">
                 <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="10 blocked websites">10</span>
+                  <span class="text-wrapper-5" aria-label="10 blocked websites">{{ $blocked_ip }}</span>
                 </div>
               </div>
             </article>
