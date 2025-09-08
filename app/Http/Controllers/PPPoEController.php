@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\RouterOsAPI;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class PPPoEController extends Controller
 {
     public function index()
     {
@@ -16,17 +16,20 @@ class DashboardController extends Controller
         $API->debug('false');
 
         if($API->connect($ip , $user , $pass)) {
-            $identitas = $API->comm('/interface/print');
+            $secret = $API->comm('/ppp/secret/print');
+            $profile = $API->comm('/ppp/profile/print');
         } else {
             return'Koneksi Gagal';
         }
 
         $data = [
-            'identitas' => $identitas[0]['name'],
+            'totalsecret' => count($secret),
+            'secret' => $secret,
+            'profile' => $profile,
         ]; 
 
-        //dd($identitas);
+        // dd($data);
 
-        return view('dashboard', $data);
+        return view('pppoe.secret', $data);
     }
 }
