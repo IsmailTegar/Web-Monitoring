@@ -18,7 +18,7 @@ class DashboardController extends Controller
         if($API->connect($ip , $user , $pass)) {
             $identitas = $API->comm('/interface/print');
         } else {
-            return'Koneksi Gagal';
+            return redirect()->back()->with('error', 'Username atau password salah!');
         }
 
         $data = [

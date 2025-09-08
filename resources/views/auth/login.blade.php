@@ -1,3 +1,58 @@
+@if(session('error'))
+<div id="error-notification" class="error-notif">
+    {{ session('error') }}
+</div>
+@endif
+
+
+
+
+<style>
+/* Notif full width, height auto, centered text, besar font */
+.error-notif {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw; /* full width hampir */
+    max-width: 500px; /* batasi max width */
+    padding: 15px 20px;
+    background-color: #f44336; /* merah cerah */
+    color: white;
+    font-size: 1.5rem; /* font lebih besar */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    animation: notif-slide-in 0.5s forwards, notif-fade-out 0.5s forwards 5s;
+    z-index: 9999;
+}
+
+@keyframes notif-slide-in {
+    from {top: -50px; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+}
+
+@keyframes notif-fade-out {
+    from {opacity: 1;}
+    to {opacity: 0; top: -50px;}
+}
+</style>
+
+<script>
+    // Menghilangkan notif setelah animasi selesai supaya elemen hilang
+    document.addEventListener("DOMContentLoaded", function(){
+        const notif = document.getElementById('error-notification');
+        if(notif){
+            setTimeout(() => {
+                notif.style.display = 'none';
+            }, 4000); // 4 detik sesuai durasi animasi total
+        }
+    });
+</script>
+
+
 <!DOCTYPE html>
 <html>
   <head>
