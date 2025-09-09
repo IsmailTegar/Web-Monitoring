@@ -154,11 +154,13 @@
                                                             <td>{{ $data['comment'] ?? '' }}</td>
                                                             <td>
                                                                 <div class="form-button-action">
-                                                                    <a href="#" data-original-title="Edit Task">
+                                                                    <a href="#" class="btn btn-link btn-primary btn-lg" data-toggle="tooltip" data-original-title="Edit Task">
                                                                         <i class="fa fa-edit"></i>
                                                                     </a>
-                                                                    <a href="" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove" onclick="return confirm('Apakah anda yakin menghapus user {{ $data['name'] }} ?')">
-                                                                        <i class="fa fa-times"></i>
+
+                                                                    <a href="#" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove"
+                                                                    onclick="return confirm('Apakah anda yakin menghapus secret {{ $data['name'] }} ?')">
+                                                                    <i class="fa fa-times"></i>
                                                                     </a>
                                                                 </div>
                                                             </td>

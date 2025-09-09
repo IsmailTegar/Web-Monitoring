@@ -168,10 +168,10 @@
                                                     <a href="#" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove"
                                                     onclick="return confirm('Apakah anda yakin menghapus secret {{ $data['name'] }} ?')">
                                                     <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                                    </a>
+                                                </div>
+                                             </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
