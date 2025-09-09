@@ -19,10 +19,7 @@ class DashboardController extends Controller
             $identitas = $API->comm('/system/identity/print');
             $onlineUsers = $API->comm('/ip/hotspot/active/print');
             $totalUsers = $API->comm('/ip/hotspot/user/print');
-             $blockedIP = $API->comm('/ip/firewall/address-list/print', [
-             ".proplist" => ".id",
-            "?list" => "blocked-ip"
-            ]);
+             $blockedIP = $API->comm('/ip/firewall/layer7-protocol/print');
         } else {
             return redirect()->back()->with('error', 'Username atau password salah!');
         }

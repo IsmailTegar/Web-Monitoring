@@ -19,7 +19,7 @@ class PPPoEController extends Controller
             $secret = $API->comm('/ppp/secret/print');
             $profile = $API->comm('/ppp/profile/print');
         } else {
-            return'Koneksi Gagal';
+            return view('failed');
         }
 
         $data = [
