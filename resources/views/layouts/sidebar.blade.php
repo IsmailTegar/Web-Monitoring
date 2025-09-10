@@ -29,13 +29,13 @@
                 </li>
 				
 				<li class="nav-item active">
-					<a href="/hostpot" aria-expanded="false">
+					<a href="{{ route('hotspot.hotspot') }}" aria-expanded="false">
 						<p>Monitoring Hostpot</p>
 					</a>
 				</li>
 
 				<li class="nav-item active">
-					<a href="/Akses" aria-expanded="false">
+					<a href="{{ route('blockedip.blockedip') }}" aria-expanded="false">
 						<p>Akses Terlarang</p>
 					</a>
 					<div class="collapse" id="dashboard">

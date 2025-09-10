@@ -6,8 +6,8 @@
             <div class="container-content">
                 <main class="frame">
                     <header class="div">
-                        <h1 class="text-wrapper">Monitoring Hostpot</h1>
-                        <p class="text-wrapper-2">Total User = {{ $totalhotspotuser }}</p>
+                        <h1 class="text-wrapper">Web Yang Terblokir</h1>
+                        <p class="text-wrapper-2"></p>
                     </header>
                     <div class="page-inner mt--5">
                         <div class="col-md-12">
@@ -40,7 +40,7 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <!-- <p class="small">Create a new row using this form, make sure you fill them all</p> -->
-                                                        <form action="{{ route('hotspot.add') }}" method="POST">
+                                                        <form action="" method="POST">
                                                             @csrf
                                                             <div class="row">
                                                                 <div class="col-sm-12">
@@ -70,9 +70,9 @@
                                                                         <label>Server</label>
                                                                         <select name="server" class="form-control" placeholder="Password">
                                                                             <option disabled selected>Pilih</option>
-                                                                            @foreach ($server as $data)
+                                                                            {{-- @foreach ($server as $data)
                                                                             <option>{{ $data['name'] }}</option>
-                                                                            @endforeach
+                                                                            @endforeach --}}
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -81,9 +81,9 @@
                                                                         <label>Profile</label>
                                                                         <select name="profile" class="form-control" placeholder="Profile">
                                                                             <option disabled selected>Pilih</option>
-                                                                            @foreach ($profile as $data)
+                                                                            {{-- @foreach ($profile as $data)
                                                                             <option>{{ $data['name'] }}</option>
-                                                                            @endforeach
+                                                                            @endforeach --}}
                                                                         </select>
                                                                     </div>
                                                                 </div>
@@ -142,7 +142,7 @@
                                                             <th>Action</th>
                                                         </tr>
                                                     </tfoot>
-                                                    <tbody>
+                                                    {{-- <tbody>
                                                         @foreach ($hotspotuser as $no => $data)
                                                         <tr>
                                                             <div hidden>{{ $id = str_replace('*', '', $data['.id']) }}</div>
@@ -176,80 +176,9 @@
                                                             </td>
                                                         </tr>
                                                         @endforeach
-                                                    </tbody>
+                                                    </tbody> --}}
                                                 </table>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="add-row" class="display table table-striped table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th>Username</th>
-                                                        <th>Password</th>
-                                                        <th>Profile</th>
-                                                        <th>Uptime</th>
-                                                        <th>Bytes In</th>
-                                                        <th>Bytes Out</th>
-                                                        <th>Status</th>
-                                                        <th>Comment</th>
-                                                        <th style="width: 10%">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th>Username</th>
-                                                        <th>Password</th>
-                                                        <th>Profile</th>
-                                                        <th>Uptime</th>
-                                                        <th>Bytes In</th>
-                                                        <th>Bytes Out</th>
-                                                        <th>Status</th>
-                                                        <th>Comment</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </tfoot>
-                                                <tbody>
-                                                    @foreach ($hotspotuser as $no => $data)
-                                                    <tr>
-                                                        <div hidden>{{ $id = str_replace('*', '', $data['.id']) }}</div>
-                                                        <td>{{ $no + 1 }}</td>
-                                                        <td>{{ $data['name'] ?? '' }}</td>
-                                                        <td>{{ $data['password'] ?? '' }}</td>
-                                                        <td>{{ $data['profile'] ?? '' }}</td>
-                                                        <td>{{ $data['uptime'] ?? '' }}</td>
-                                                        <td>{{ formatBytes($data['bytes-in'],) }}</td>
-                                                        <td>{{ formatBytes($data['bytes-out'],) }}</td>
-                                                        <td>
-                                                            @if ($data['disabled'] == "true" )
-                                                            Disable
-                                                            @else
-                                                            Enable
-                                                            @endif
-            
-                                                        </td>
-                                                        <td>{{ $data['comment'] ?? '' }}</td>
-                                                        <td>
-                                                            <div class="form-button-action">
-                                                                <a href="#" class="btn btn-link btn-primary btn-lg" data-toggle="tooltip" data-original-title="Edit Task">
-                                                                    <i class="fa fa-edit"></i>
-                                                                </a>
-            
-                                                                <a href="#" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove"
-                                                                onclick="return confirm('Apakah anda yakin menghapus secret {{ $data['name'] }} ?')">
-                                                                <i class="fa fa-times"></i>
-                                                                </a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -260,20 +189,6 @@
             </div>
         </div>
     </div>
-
-@php
-
-function formatBytes($bytes, $decimal = null){
-$satuan = ['Bytes', 'Kb', 'Mb', 'Gb', 'Tb'];
-$i = 0;
-while ($bytes > 1024) {
-    $bytes /= 1024;
-    $i++;
-}
-return round($bytes, $decimal) .'-' . $satuan[$i];
-}
-
-@endphp
 
 @endsection
 

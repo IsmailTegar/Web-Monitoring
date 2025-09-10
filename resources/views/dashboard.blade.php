@@ -54,7 +54,7 @@
               </div>
               <div class="div-5">
                 <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="10 blocked websites">{{ $blocked_ip }}</span>
+                  <span class="text-wrapper-5" aria-label="10 blocked websites">{{ $blocked_web }}</span>
                 </div>
               </div>
             </article>

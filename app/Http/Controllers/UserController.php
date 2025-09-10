@@ -29,12 +29,46 @@ class UserController extends Controller
                 'profile' => $profile,
             ];
 
+            dd($data);
+
             return view('hotspot.hotspot', $data);
 
         } else {
 
             return redirect('failed');
         }
+    }
+
+    public function add(Request $request)
+    {
+
+        $request->validate([
+            'user' => 'required',
+            'password' => 'required',
+        ]);
+
+        $ip = session()->get('ip');
+        $user = session()->get('user');
+        $password = session()->get('password');
+        $API = new RouterosAPI();
+        $API->debug('false');
+
+        if ($API->connect($ip, $user, $password)) {
+            $API->comm('/ip/hotspot/user/add', [
+
+                'name' => $request['user'],
+                'password' => $request['password'],
+                'server' => $request['server'],
+                'profile' => $request['profile'],
+                'limit-uptime' => $request('timelimit') == '' ? '0' : $request['timelimit'],
+                'comment' => $request['comment'] == '' ? '' : $request['comment'],
+            ]);
+        } else {
+
+            return redirect('failed');
+        }
+
+        return redirect()->route('hotspot.hotspot');
     }
 }
 

@@ -19,9 +19,10 @@ class DashboardController extends Controller
             $identitas = $API->comm('/system/identity/print');
             $onlineUsers = $API->comm('/ip/hotspot/active/print');
             $totalUsers = $API->comm('/ip/hotspot/user/print');
-             $blockedIP = $API->comm('/ip/firewall/layer7-protocol/print');
+            $blockedIP = $API->comm('/ip/firewall/address-list/print');
+            $blockedWeb = $API->comm('/ip/firewall/layer7-protocol/print');
         } else {
-            return redirect()->back()->with('error', 'Username atau password salah!');
+            return view('failed');
         }
 
         $data = [
@@ -29,6 +30,7 @@ class DashboardController extends Controller
             'online_users' => count($onlineUsers) ?? 0,
             'total_users'  => count($totalUsers) ?? 0,
             'blocked_ip'   => count($blockedIP) ?? 0,
+            'blocked_web'  => count($blockedWeb) ?? 0,
         ]; 
 
 

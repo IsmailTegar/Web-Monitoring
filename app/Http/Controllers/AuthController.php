@@ -13,6 +13,12 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+
+        $request->validate([
+            'ip' => 'required',
+            'user' => 'required',
+        ]);
+
         $ip = $request->post('ip');
         $user = $request->post('user');
         $pass = $request->post('pass');
