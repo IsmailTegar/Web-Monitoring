@@ -17,7 +17,7 @@
                                         <!-- <h4 class="card-title">Add Row</h4> -->
                                         <button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
                                             <i class="fa fa-plus"></i>
-                                            Add User
+                                             Add User
                                         </button>
                                     </div>
                                 </div>

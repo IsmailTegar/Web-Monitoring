@@ -14,10 +14,17 @@ Route::get('/notification', function() {
     return view('notification');
 });
 
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
+//LOGIN
 Route::get('/', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login.post');
+
+//DASHBOARD
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+//DASHBOARD REALTIME
+Route::get('dashboard/cpu', [DashboardController::class, 'cpu'])->name('dashboard.cpu');
+Route::get('dashboard/uptime', [DashboardController::class, 'uptime'])->name('dashboard.realtime');
+
 
 Route::get('pppoe/secret', [PPPoEController::class, 'index'])->name('pppoe.secret');
 

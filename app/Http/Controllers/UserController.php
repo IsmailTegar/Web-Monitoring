@@ -29,8 +29,6 @@ class UserController extends Controller
                 'profile' => $profile,
             ];
 
-            dd($data);
-
             return view('hotspot.hotspot', $data);
 
         } else {

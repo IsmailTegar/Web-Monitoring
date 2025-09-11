@@ -111,35 +111,22 @@
                                         </div>
 
 
-                                        <div class="card-body">
+                                        <div class="card-body" style="width: 1070px">
                                             <div class="table-responsive">
                                                 <table id="add-row" class="display table table-striped table-hover">
                                                     <thead>
                                                         <tr>
-                                                            <th>No</th>
-                                                            <th>Username</th>
-                                                            <th>Password</th>
-                                                            <th>Profile</th>
-                                                            <th>Uptime</th>
-                                                            <th>Bytes In</th>
-                                                            <th>Bytes Out</th>
-                                                            <th>Status</th>
-                                                            <th>Comment</th>
+                                                            <th style="width: 5%">No</th>
+                                                            <th>Name</th>
+                                                            <th>Domain</th>
                                                             <th style="width: 10%">Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tfoot>
                                                         <tr>
                                                             <th>No</th>
-                                                            <th>Username</th>
-                                                            <th>Password</th>
-                                                            <th>Profile</th>
-                                                            <th>Uptime</th>
-                                                            <th>Bytes In</th>
-                                                            <th>Bytes Out</th>
-                                                            <th>Status</th>
-                                                            <th>Comment</th>
-                                                            <th>Action</th>
+                                                            <th>Name</th>
+                                                            <th>Domain</th>
                                                         </tr>
                                                     </tfoot>
                                                     {{-- <tbody>

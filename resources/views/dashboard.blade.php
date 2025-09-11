@@ -4,73 +4,213 @@
   <div class="main-panel">
    <div class="content">
     <div class="container-content">
-    <main class="frame">
-      <header class="div">
-        <h1 class="text-wrapper">Dashboard</h1>
-        <p class="text-wrapper-2">Mikrotik Name : {{ $identitas }}</p>
-      </header>
-      <div class="div-2">
-        <section class="div-3">
-          <div class="div-wrapper">
-            <h2 class="text-wrapper-3">Monitoring</h2>
+      <main class="frame">
+        <header class="div">
+          <h1 class="text-wrapper">Dashboard</h1>
+          <p class="text-wrapper-2">Mikrotik Name : {{ $identitas }}</p>
+        </header>
+        <div class="page-inner mt--5">
+          <div class="row">
+              <div class="col-sm-6 col-md-3">
+                  <div class="card card-stats card-round">
+                      <div class="card-body ">
+                          <div class="row align-items-center">
+                              <div class="col-icon">
+                                  <div class="icon-big text-center icon-warning bubble-shadow-small">
+                                      <i class="fas fa-info"></i>
+                                  </div>
+                              </div>
+                              <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers">
+                                      <p class="card-category">Info</p>
+                                      {{-- <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
+                                      <b> OS : {{ $version }}</b> --}}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <a href="#" style="text-decoration:none" >
+                      <div class="card card-stats card-round">
+                          <div class="card-body">
+                              <div class="row align-items-center">
+                                  <div class="col-icon">
+                                      <div class="icon-big text-center icon-muted bubble-shadow-small">
+                                          <i class="fas fa-users"></i>
+                                      </div>
+                                  </div>
+                                  <div class="col col-stats ml-3 ml-sm-0">
+                                      <div class="numbers">
+                                          <p class="card-category">PPPoE Active</p>
+                                          <h4 class="card-title">0</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <a href="" style="text-decoration:none" >
+                      <div class="card card-stats card-round">
+                          <div class="card-body">
+                              <div class="row align-items-center">
+                                  <div class="col-icon">
+                                      <div class="icon-big text-center icon-muted bubble-shadow-small">
+                                          <i class="fas fa-users"></i>
+                                      </div>
+                                  </div>
+                                  <div class="col col-stats ml-3 ml-sm-0">
+                                      <div class="numbers">
+                                          <p class="card-category">Hotspot Active</p>
+                                          <h4 class="card-title">{{ $online_users }}</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <div class="card card-stats card-round">
+                      <div class="card-body ">
+                          <div class="row align-items-center">
+                              <div class="col-icon">
+                                  <div class="icon-big text-center icon-primary bubble-shadow-small">
+                                      <i class="fas fa-th-list"></i>
+                                  </div>
+                              </div>
+                              <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers">
+                                      <p class="card-category">CPU Load</p>
+                                      <h3 class="card-title" id="cpu"></h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <div class="card card-stats card-round">
+                      <div class="card-body">
+                          <div class="row align-items-center">
+                              <div class="col-icon">
+                                  <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                      <i class="fas fa-clock"></i>
+
+                                  </div>
+                              </div>
+                              <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers">
+                                      <p class="card-category">Uptime</p>
+                                      <h4 class="card-title" id="uptime"></h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <a href="#" style="text-decoration:none" >
+                      <div class="card card-stats card-round">
+                          <div class="card-body">
+                              <div class="row align-items-center">
+                                  <div class="col-icon">
+                                      <div class="icon-big text-center icon-info bubble-shadow-small">
+                                          <i class="fas fa-home"></i>
+                                      </div>
+                                  </div>
+                                  <div class="col col-stats ml-3 ml-sm-0">
+                                      <div class="numbers">
+                                          <p class="card-category">Total PPPoE Secret</p>
+                                          <h4 class="card-title">0</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <a href="" style="text-decoration:none" >
+                      <div class="card card-stats card-round">
+                          <div class="card-body">
+                              <div class="row align-items-center">
+                                  <div class="col-icon">
+                                      <div class="icon-big text-center icon-info bubble-shadow-small">
+                                          <i class="fas fa-wifi"></i>
+                                      </div>
+                                  </div>
+                                  <div class="col col-stats ml-3 ml-sm-0">
+                                      <div class="numbers">
+                                          <p class="card-category">Total User Hotspot</p>
+                                          <h4 class="card-title">{{ $total_users }}</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <div class="card card-stats card-round">
+                      <div class="card-body">
+                          <div class="row align-items-center">
+                              <div class="col-icon">
+                                  <div class="icon-big text-center icon-danger bubble-shadow-small">
+                                      <i class="fas fa-database"></i>
+                                  </div>
+                              </div>
+                              <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers">
+                                      <p class="card-category">Free Memory/Hdd</p>
+                                      <h4 class="card-title"></h4>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="div-4" role="group" aria-label="Monitoring statistics">
-            <article class="card-dashboard">
-              <div class="div-wrapper">
-                <h3 class="text-wrapper-4">Online Users</h3>
+
+          <div class="row">
+              <div class="col-sm-12 col-md-8">
+                  <div class="card">
+                      <div class="card-header">
+                          <div class="card-head-row">
+                              <div class="card-title">List Traffic Naik</div>
+                          </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="table-responsive">
+                              <div id="load"></div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-              <div class="div-5">
-                <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="20 online users">{{ $online_users }}</span>
-                </div>
-                <div class="ellipse-wrapper">
-                  <div class="ellipse" role="img" aria-label="Online status indicator"></div>
-                </div>
+
+              <div class="col-sm-8 col-md-4">
+                  <div class="card card-stats">
+                      <div class="form-group">
+                          <label for="defaultSelect">Select Interface</label>
+                          <select class="form-control form-control" name="interface" id="interface">
+                              {{-- @foreach ($interface as $data)
+                                  <option value="{{ $data['name'] }}">{{ $data['name'] }}</option>
+                              @endforeach --}}
+                          </select>
+                      </div>
+                      <div class="form-group" id="traffic"></div>
+                  </div>
               </div>
-            </article>
-            <article class="card-dashboard-2">
-              <div class="div-wrapper">
-                <h3 class="text-wrapper-4">Total User</h3>
-              </div>
-              <div class="div-5">
-                <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="100 total users">{{ $total_users }}</span>
-                </div>
-              </div>
-            </article>
-            <article class="card-dashboard-2">
-              <div class="div-wrapper">
-                <h3 class="text-wrapper-4">Blocked IP</h3>
-              </div>
-              <div class="div-5">
-                <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="8 blocked IP addresses">{{ $blocked_ip }}</span>
-                </div>
-              </div>
-            </article>
-            <article class="card-dashboard-3">
-              <div class="div-wrapper">
-                <h3 class="text-wrapper-4">Blocked Web</h3>
-              </div>
-              <div class="div-5">
-                <div class="div-wrapper-2">
-                  <span class="text-wrapper-5" aria-label="10 blocked websites">{{ $blocked_web }}</span>
-                </div>
-              </div>
-            </article>
           </div>
-        </section>
-            <div class="card-title">Internet Usage</div>
-            <div class="card-body">
-                <div class="chart-container" style="min-width: 1070px">
-                    <canvas id="statisticsChart"></canvas>
-                </div>
-                <div id="myChartLegend"></div>
-            </div>
-        </section>
-      </div>
-    </main>
+        </div>
+      </main>
     </div>
    </div>
  </div>
+
+ 
 @endsection
