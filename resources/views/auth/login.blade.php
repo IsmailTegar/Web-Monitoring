@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Selamat Datang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
@@ -10,7 +11,7 @@
     <div class="login">
       <div class="frame-wrapper">
         <div class="frame">
-          <img class="rectangle" src="img/rectangle-3.png" />
+          <img class="rectangle" src="{{ asset('images/logo.jpeg') }}" alt="logo"/>
           <div class="div">
             <div class="frame-2">
               <div class="div-wrapper"><div class="text-wrapper">Welcome!</div></div>
@@ -45,8 +46,8 @@
                         <input type="password" placeholder="Password" class="input-custom @error('pass') is-invalid @enderror" name="pass">
                       </div>
                     </div>
-                    <div class="button-wrapper">
-                      <button type="submit" class="button">Button</button>
+                    <div class="button-wrapper" style="color:white">
+                      <button type="submit" class="button">Login</button>
                     </div>
                   </div>
                 </div>

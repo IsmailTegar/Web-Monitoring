@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-  <div class="main-panel">
+<div class="main-panel">
    <div class="content">
     <div class="container-content">
       <main class="frame">
@@ -12,8 +12,8 @@
         <div class="page-inner mt--5">
           <div class="row">
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round">
-                      <div class="card-body ">
+                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                      <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
                                   <div class="icon-big text-center icon-warning bubble-shadow-small">
@@ -33,7 +33,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="#" style="text-decoration:none" >
-                      <div class="card card-stats card-round">
+                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -54,7 +54,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="" style="text-decoration:none" >
-                      <div class="card card-stats card-round">
+                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -74,7 +74,7 @@
                   </a>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round">
+                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body ">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -93,7 +93,7 @@
                   </div>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round">
+                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -114,7 +114,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="#" style="text-decoration:none" >
-                      <div class="card card-stats card-round">
+                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -135,7 +135,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="" style="text-decoration:none" >
-                      <div class="card card-stats card-round">
+                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -155,7 +155,7 @@
                   </a>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round">
+                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -166,7 +166,7 @@
                               <div class="col col-stats ml-3 ml-sm-0">
                                   <div class="numbers">
                                       <p class="card-category">Free Memory/Hdd</p>
-                                      <h4 class="card-title"></h4>
+                                      <h4 class="card-title" style="font-size: 75%">({{ $freememory }})/({{ $freehdd }})</h4>
 
                                   </div>
                               </div>
@@ -193,24 +193,47 @@
               </div>
 
               <div class="col-sm-8 col-md-4">
-                  <div class="card card-stats">
+                  <div class="card card-stats" style="border-top-color: blue; border-bottom-color: blue; border-top-width: 3px; border-bottom-width: 3px">
                       <div class="form-group">
                           <label for="defaultSelect">Select Interface</label>
                           <select class="form-control form-control" name="interface" id="interface">
-                              {{-- @foreach ($interface as $data)
+                              @foreach ($interface as $data)
                                   <option value="{{ $data['name'] }}">{{ $data['name'] }}</option>
-                              @endforeach --}}
+                              @endforeach
                           </select>
                       </div>
                       <div class="form-group" id="traffic"></div>
                   </div>
+                  <div class="card card-stats" style="border-top-color: blue; border-bottom-color: blue; border-top-width: 3px; border-bottom-width: 3px">
+                    <div class="card-body">
+                        <h3 class="card-title" id="cpu"></h3>
+                    </div>
+                  </div>
+              </div>
               </div>
           </div>
         </div>
       </main>
     </div>
    </div>
- </div>
+</div>
 
- 
+<script type="text/javascript">
+
+    setInterval('cpu();',1000);
+    function cpu() {
+        $('#cpu').load('{{ route('dashboard.cpu') }}')
+    }
+    setInterval('uptime();',1000);
+    function uptime() {
+        $('#uptime').load('{{ route('dashboard.uptime') }}')
+    }
+    setInterval('traffic();',1000);
+    function traffic() {
+        var traffic = $('#interface').val() ;
+        var url = '{{ route("dashboard.traffic", ":traffic") }}';
+        // console.log(traffic);
+        $('#traffic').load(url.replace(':traffic', traffic));
+    }
+</script>
 @endsection

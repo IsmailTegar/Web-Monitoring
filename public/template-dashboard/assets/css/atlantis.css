@@ -2337,7 +2337,8 @@ label {
   background: #F25961 !important; }
 
 .card-round {
-  border-radius: 5px; }
+  border-radius: 5px;
+ }
 
 /*     Progress Card    */
 .progress-card {

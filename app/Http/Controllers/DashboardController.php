@@ -50,7 +50,7 @@ class DashboardController extends Controller
     }
 
     public function cpu()
-   {
+    {
         $ip = session()->get('ip');
         $user = session()->get('user');
         $pass = session()->get('pass');
@@ -72,7 +72,7 @@ class DashboardController extends Controller
     }
 
         public function uptime()
-   {
+    {
         $ip = session()->get('ip');
         $user = session()->get('user');
         $pass = session()->get('pass');
@@ -91,6 +91,36 @@ class DashboardController extends Controller
 
 
         return view('realtime.uptime', $data);
+    }
+
+
+        public function traffic($traffic)
+    {
+        $ip = session()->get('ip');
+        $user = session()->get('user');
+        $pass = session()->get('pass');
+        $API = new RouterOsAPI();
+        $API->debug('false');
+
+        if ($API->connect($ip, $user, $pass)) {
+            $traffic = $API->comm('/interface/monitor-traffic', array(
+                'interface' => $traffic,
+                'once' => '',
+            ));
+
+            $rx = $traffic[0]['rx-bits-per-second'];
+            $tx = $traffic[0]['tx-bits-per-second'];
+        } else {
+            return view('failed');
+        }
+
+        $data = [
+            'rx' => $rx,
+            'tx' => $tx,
+        ];
+
+        return view('realtime.traffic', $data);
+
     }
 
 

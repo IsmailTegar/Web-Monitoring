@@ -23,7 +23,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 
 //DASHBOARD REALTIME
 Route::get('dashboard/cpu', [DashboardController::class, 'cpu'])->name('dashboard.cpu');
-Route::get('dashboard/uptime', [DashboardController::class, 'uptime'])->name('dashboard.realtime');
+Route::get('dashboard/uptime', [DashboardController::class, 'uptime'])->name('dashboard.uptime');
+Route::get('dashboard/{traffic}', [DashboardController::class, 'traffic'])->name('dashboard.traffic');
 
 
 Route::get('pppoe/secret', [PPPoEController::class, 'index'])->name('pppoe.secret');
