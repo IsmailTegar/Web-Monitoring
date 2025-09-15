@@ -129,26 +129,16 @@
                                                             <th>Domain</th>
                                                         </tr>
                                                     </tfoot>
-                                                    {{-- <tbody>
-                                                        @foreach ($hotspotuser as $no => $data)
+                                                    <tbody>
+                                                        @foreach ($blockedip as $no => $data)
                                                         <tr>
                                                             <div hidden>{{ $id = str_replace('*', '', $data['.id']) }}</div>
                                                             <td>{{ $no + 1 }}</td>
                                                             <td>{{ $data['name'] ?? '' }}</td>
-                                                            <td>{{ $data['password'] ?? '' }}</td>
-                                                            <td>{{ $data['profile'] ?? '' }}</td>
-                                                            <td>{{ $data['uptime'] ?? '' }}</td>
-                                                            <td>{{ formatBytes($data['bytes-in'],) }}</td>
-                                                            <td>{{ formatBytes($data['bytes-out'],) }}</td>
                                                             <td>
-                                                                @if ($data['disabled'] == "true" )
-                                                                Disable
-                                                                @else
-                                                                Enable
-                                                                @endif
-
+                                                                {{ preg_match('/([a-z0-9\-]+\.[a-z0-9\-]+)/i', $data['regexp'], $matches) ? $matches[1] : '' }}
                                                             </td>
-                                                            <td>{{ $data['comment'] ?? '' }}</td>
+                                             
                                                             <td>
                                                                 <div class="form-button-action">
                                                                     <a href="#" class="btn btn-link btn-primary btn-lg" data-toggle="tooltip" data-original-title="Edit Task">
@@ -163,7 +153,7 @@
                                                             </td>
                                                         </tr>
                                                         @endforeach
-                                                    </tbody> --}}
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>

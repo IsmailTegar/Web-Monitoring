@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FirewallController;
 use App\Http\Controllers\PPPoEController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,13 @@ Route::get('hotspot/hotspot/delete/{id}', [UserController::class, 'delete'])->na
 
 // Firewall
 Route::get('/blockedip', [FirewallController::class, 'index'])->name('blockedip.blockedip');
+
+//TRAFFIC
+Route::get('report-traffic', [ReportController::class, 'index'])->name('traffic.index');
+Route::get('up', [ReportController::class, 'up'])->name('up');
+Route::get('down', [ReportController::class, 'down'])->name('down');
+
+
 
 
 

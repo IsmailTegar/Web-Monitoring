@@ -17,7 +17,7 @@ class FirewallController extends Controller
 
         if ($API->connect($ip, $user, $password)) {
 
-            $blockedip = $API->comm('/ip/firewall/address-list/print');
+            $blockedip = $API->comm('/ip/firewall/layer7-protocol/print');
 
 
             $data = [
@@ -25,6 +25,7 @@ class FirewallController extends Controller
                 'blockedip' => $blockedip,
             ];
 
+            
 
             return view('blockedip.blockedip', $data);
 

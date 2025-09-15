@@ -59,6 +59,12 @@
 						<p>Notification</p>
 					</a>
 				</li>
+
+				<li class="nav-item active">
+					<a href="{{ route('traffic.index') }}" aria-expanded="false">
+						<p>Report Data</p>
+					</a>
+				</li>
 			</ul>	
 		</div>
 	</div>
