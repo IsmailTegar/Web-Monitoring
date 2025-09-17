@@ -11,9 +11,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/failed', function () {
     return view('failed');
 });
-Route::get('/notification', function() {
-    return view('notification');
-});
 
 //LOGIN
 Route::get('/', [AuthController::class, 'index'])->name('login');
@@ -42,7 +39,7 @@ Route::get('hotspot/hotspot/delete/{id}', [UserController::class, 'delete'])->na
 Route::get('/blockedip', [FirewallController::class, 'index'])->name('blockedip.blockedip');
 
 //TRAFFIC
-Route::get('report-traffic', [ReportController::class, 'index'])->name('traffic.index');
+Route::get('notification', [ReportController::class, 'index'])->name('traffic.index');
 Route::get('up', [ReportController::class, 'up'])->name('up');
 Route::get('down', [ReportController::class, 'down'])->name('down');
 
