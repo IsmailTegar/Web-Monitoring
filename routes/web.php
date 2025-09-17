@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FirewallController;
 use App\Http\Controllers\PPPoEController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\UserActive;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,9 @@ Route::get('/blockedip', [FirewallController::class, 'index'])->name('blockedip.
 Route::get('notification', [ReportController::class, 'index'])->name('traffic.index');
 Route::get('up', [ReportController::class, 'up'])->name('up');
 Route::get('down', [ReportController::class, 'down'])->name('down');
+
+//USER ACTIVE
+Route::get('Monitoring-User', [UserActive::class, 'index'])->name('usermonitoring.user');
 
 
 

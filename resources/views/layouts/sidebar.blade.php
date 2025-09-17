@@ -61,8 +61,8 @@
 				</li>
 
 				<li class="nav-item active">
-					<a href="{{ route('traffic.index') }}" aria-expanded="false">
-						<p>Report Data</p>
+					<a href="/Monitoring-User" class="collapsed">
+						<p>Monitoring</p>
 					</a>
 				</li>
 			</ul>	

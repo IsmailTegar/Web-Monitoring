@@ -12,7 +12,7 @@
                     <div class="page-inner mt--5">
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header">
+                                {{-- <div class="card-header">
                                     <div class="d-flex align-items-center">
                                         <!-- <h4 class="card-title">Add Row</h4> -->
                                         <button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
@@ -20,11 +20,11 @@
                                             Add User
                                         </button>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="card-body">
                                     <!-- Modal -->
                                     <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
+                                        {{-- <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header no-bd">
                                                     <h5 class="modal-title">
@@ -73,7 +73,7 @@
                                                                             {{-- @foreach ($server as $data)
                                                                             <option>{{ $data['name'] }}</option>
                                                                             @endforeach --}}
-                                                                        </select>
+                                                                        {{-- </select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-12">
@@ -84,7 +84,18 @@
                                                                             {{-- @foreach ($profile as $data)
                                                                             <option>{{ $data['name'] }}</option>
                                                                             @endforeach --}}
-                                                                        </select>
+                                                                        {{-- </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group form-group-default">
+                                                                        <label>Profile</label>
+                                                                        <select name="profile" class="form-control" placeholder="Profile">
+                                                                            <option disabled selected>Pilih</option>
+                                                                            {{-- @foreach ($profile as $data)
+                                                                            <option>{{ $data['name'] }}</option>
+                                                                            @endforeach --}}
+                                                                        {{-- </select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-12">
@@ -108,54 +119,53 @@
                                                     </form>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                                    <div class="card-body" style="width: 1070px">
+                                        <div class="table-responsive">
+                                            <table id="add-row" class="display table table-striped table-hover">
+                                                <thead style="text-align: left;">
+                                                    <tr>
+                                                        <th style="width: 5%">No</th>
+                                                        <th>Name</th>
+                                                        <th>Domain</th>
+                                                        <th style="width: 10%">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot style="text-align: left;">
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Domain</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody style="text-align: left;">
+                                                    @foreach ($blockedip as $no => $data)
+                                                    <tr>
+                                                        <div hidden>{{ $id = str_replace('*', '', $data['.id']) }}</div>
+                                                        <td>{{ $no + 1 }}</td>
+                                                        <td>{{ $data['name'] ?? '' }}</td>
+                                                        <td>
+                                                            {{ preg_match('/([a-z0-9\-]+\.[a-z0-9\-]+)/i', $data['regexp'], $matches) ? $matches[1] : '' }}
+                                                        </td>
+                                            
+                                                        <td>
+                                                            <div class="form-button-action">
+                                                                <a href="#" class="btn btn-link btn-primary btn-lg" data-toggle="tooltip" data-original-title="Edit Task">
+                                                                    <i class="fa fa-edit"></i>
+                                                                </a>
 
-
-                                        <div class="card-body" style="width: 1070px">
-                                            <div class="table-responsive">
-                                                <table id="add-row" class="display table table-striped table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th style="width: 5%">No</th>
-                                                            <th>Name</th>
-                                                            <th>Domain</th>
-                                                            <th style="width: 10%">Action</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Name</th>
-                                                            <th>Domain</th>
-                                                        </tr>
-                                                    </tfoot>
-                                                    <tbody>
-                                                        @foreach ($blockedip as $no => $data)
-                                                        <tr>
-                                                            <div hidden>{{ $id = str_replace('*', '', $data['.id']) }}</div>
-                                                            <td>{{ $no + 1 }}</td>
-                                                            <td>{{ $data['name'] ?? '' }}</td>
-                                                            <td>
-                                                                {{ preg_match('/([a-z0-9\-]+\.[a-z0-9\-]+)/i', $data['regexp'], $matches) ? $matches[1] : '' }}
-                                                            </td>
-                                             
-                                                            <td>
-                                                                <div class="form-button-action">
-                                                                    <a href="#" class="btn btn-link btn-primary btn-lg" data-toggle="tooltip" data-original-title="Edit Task">
-                                                                        <i class="fa fa-edit"></i>
-                                                                    </a>
-
-                                                                    <a href="#" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove"
-                                                                    onclick="return confirm('Apakah anda yakin menghapus secret {{ $data['name'] }} ?')">
-                                                                    <i class="fa fa-times"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        @endforeach
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                                <a href="#" type="button" data-toggle="tooltip" class="btn btn-link btn-danger" data-original-title="Remove"
+                                                                onclick="return confirm('Apakah anda yakin menghapus secret {{ $data['name'] }} ?')">
+                                                                <i class="fa fa-times"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
