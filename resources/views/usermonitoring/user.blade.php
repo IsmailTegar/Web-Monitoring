@@ -8,31 +8,38 @@
             <main class="frame">
                 <div class="card">
                     <div class="card-body" style="width: 1070px">
+                        <div>
+                            <h3 class="text-black pb-2 fw-bold">User Monitoring</h3>
+                        </div>
                         <div class="table-responsive">
                             <table id="add-row" class="display table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Ip Address</th>
+                                        <th>Username</th>
+                                        <th>IP</th>
                                         <th>Destination</th>
-                                        <th>Start From</th>
+                                        <th>Login Time</th>
                                         <th>Uptime</th>
+                                        <th>Upload</th>
+                                        <th>Download</th>
                                         <th>Status</th>
-                                        <th>Created At</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>No</th>
-                                        <th>Ip Address</th>
+                                        <th>Username</th>
+                                        <th>IP</th>
                                         <th>Destination</th>
-                                        <th>Start From</th>
+                                        <th>Login Time</th>
                                         <th>Uptime</th>
+                                        <th>Upload</th>
+                                        <th>Download</th>
                                         <th>Status</th>
-                                        <th>Created At</th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
+                                {{-- <tbody>
                                     @foreach ($logs as $log)
                                     <tr>
                                         <td>{{ $log->id }}</td>
@@ -44,7 +51,7 @@
                                         <td>{{ $log->created_at }}</td>
                                     </tr>
                                     @endforeach
-                                </tbody>
+                                </tbody> --}}
                             </table>
                         </div>
                     </div>

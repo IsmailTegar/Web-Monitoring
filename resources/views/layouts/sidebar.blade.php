@@ -12,7 +12,7 @@
 
 				<li class="nav-item active">
                     <a data-toggle="collapse" href="#base">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-signal"></i>
                         <p>PPPoE</p>
                         <span class="caret"></span>
                     </a>
@@ -30,6 +30,7 @@
 				
 				<li class="nav-item active">
 					<a href="{{ route('hotspot.hotspot') }}" aria-expanded="false">
+						<i class="fas fa-broadcast-tower"></i>
 						<p>Monitoring Hostpot</p>
 					</a>
 				</li>

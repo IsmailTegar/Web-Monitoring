@@ -70,6 +70,13 @@
 			styleText:true
 		})
 
+		$(document).ready(function() {
+			$('#add-row').DataTable({
+				"paging": true, // Aktifkan pagination
+				"pageLength": 10 // Jumlah baris per halaman
+			});
+		});
+
 		Circles.create({
 			id:'circles-3',
 			radius:45,
