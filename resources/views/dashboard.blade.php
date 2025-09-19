@@ -23,8 +23,8 @@
                               <div class="col col-stats ml-3 ml-sm-0">
                                   <div class="numbers">
                                       <p class="card-category">Info</p>
-                                      {{-- <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
-                                      <b> OS : {{ $version }}</b> --}}
+                                      <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
+                                      <b> OS : {{ $version }}</b>
                                   </div>
                               </div>
                           </div>
@@ -206,7 +206,10 @@
                   </div>
                   <div class="card card-stats" style="border-top-color: blue; border-bottom-color: blue; border-top-width: 3px; border-bottom-width: 3px">
                     <div class="card-body">
-                        <h3 class="card-title" id="cpu"></h3>
+                        <div class="px-2 pb-2 pb-md-0 text-center">
+                            <div id="circles-1"></div>
+                            <h6 class="fw-bold mt-3 mb-0">New Users</h6>
+                        </div>
                     </div>
                   </div>
               </div>
@@ -236,4 +239,37 @@
         $('#traffic').load(url.replace(':traffic', traffic));
     }
 </script>
+<script>
+
+    function cpu() {
+        $('#cpu').load('{{ route('dashboard.cpu') }}', function() {
+            let cpuVal = parseInt(document.getElementById('cpu').innerText) || 0;
+            let warna;
+            if(cpuVal < 40){
+                warna = '#28a745';
+            }else if(cpuVal < 75){
+                warna = '#ffc107';
+            }else{
+                warna = '#dc3545';
+            }
+            // Hapus lingkaran lama jika ada
+            document.getElementById('circles-1').innerHTML = '';
+            Circles.create({
+                id: 'circles-1',
+                radius: 45,
+                value: cpuVal,
+                maxValue: 100,
+                width: 7,
+                text: cpuVal + '%',
+                colors: ['#f1f1f1', warna],
+                duration: 400,
+                wrpClass: 'circles-wrp',
+                textClass: 'circles-text',
+                styleWrapper: true,
+                styleText: true
+            });
+        });
+    }
+</script>
+
 @endsection

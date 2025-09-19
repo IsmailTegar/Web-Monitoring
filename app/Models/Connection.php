@@ -14,7 +14,7 @@ class Connection extends Model
         'mikrotik_id',
         'username',
         'ip_address',
-        'mac_address',
+        'destination',
         'login_by',
         'login_time',
         'uptime',

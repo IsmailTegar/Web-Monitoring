@@ -1,31 +1,14 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Http\Controllers;
 
 use App\Models\Connection;
 use App\Models\RouterOsAPI;
-use Illuminate\Console\Command;
 
-class GetMikrotikData extends Command
+
+class fetchmonitoring extends Controller
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'app:get_data';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Mengambil Data dari Mikrotik';
-
-    /**
-     * Execute the console command.
-     */
-    public function handle()
+    public function index()
     {
         $ip = session()->get('ip');
         $user = session()->get('user');
@@ -41,13 +24,18 @@ class GetMikrotikData extends Command
                     'username' => $conn['user'] ?? null,
                     'ip_address' => $conn['address'] ?? null,
                     'uptime'    => $conn['uptime'] ?? null,
-                    'bytes_in'       => $conn['bytes_in'] ?? 0,
-                    'bytes_out'       => $conn['bytes_out'] ?? 0,
+                    'bytes_in'    => $conn['bytes_in'] ?? 0,
+                    'bytes_out'    => $conn['bytes_out'] ?? 0,
                 ]);
             }
 
+            return response()->json([
+                'status' => 'ok',
+                'count'  => count($connections)
+            ]);
+
         } else {
-            echo('koneksi gagal');
+            return redirect('failed');
         }
     }
 }

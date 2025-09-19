@@ -40,20 +40,20 @@
 	<script src="{{ asset('template-dashboard') }}/assets/js/setting-demo.js"></script>
 	<script src="{{ asset('template-dashboard') }}/assets/js/demo.js"></script>
 	<script>
-		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
-			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
+		// Circles.create({
+		// 	id:'circles-1',
+		// 	radius:45,
+		// 	value:60,
+		// 	maxValue:100,
+		// 	width:7,
+		// 	text: 5,
+		// 	colors:['#f1f1f1', '#FF9E27'],
+		// 	duration:400,
+		// 	wrpClass:'circles-wrp',
+		// 	textClass:'circles-text',
+		// 	styleWrapper:true,
+		// 	styleText:true
+		// })
 
 		Circles.create({
 			id:'circles-2',

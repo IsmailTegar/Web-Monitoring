@@ -7,6 +7,7 @@
 	<link rel="icon" href="{{ asset('template-dashboard') }}/assets/img/icon.ico" type="image/x-icon"/>
 	<link rel="stylesheet" href="{{ asset('css/appdashboard.css') }}">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 	<!-- Fonts and icons -->

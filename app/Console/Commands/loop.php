@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Connection;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
@@ -31,7 +32,7 @@ class loop extends Command
         try {
             while (true) {
                 Artisan::call('app:dummy');
-                $this->info('Command app:dummy dijalankan ' . now());
+                $this->info('Command app:dummy dijalankan ' . Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'));
                 sleep(10);
             }
         } catch (\Exception $e) {

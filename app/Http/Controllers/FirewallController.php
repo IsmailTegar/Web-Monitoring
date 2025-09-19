@@ -25,8 +25,7 @@ class FirewallController extends Controller
                 'blockedip' => $blockedip,
             ];
 
-            
-
+            dd($data);
             return view('blockedip.blockedip', $data);
 
         } else {

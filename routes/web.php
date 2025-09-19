@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\fetchmonitoring;
 use App\Http\Controllers\FirewallController;
 use App\Http\Controllers\monitoring;
 use App\Http\Controllers\PPPoEController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\testuser;
 use App\Http\Controllers\UserActive;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +49,12 @@ Route::get('down', [ReportController::class, 'down'])->name('down');
 
 //USER ACTIVE
 Route::get('Monitoring-User', [monitoring::class, 'index'])->name('usermonitoring.user');
+Route::get('Monitoring-User/table1', [monitoring::class, 'table1'])->name('monitoring.table1');
+
+
+//TEST USER
+Route::get('testuser', [fetchmonitoring::class, 'index'])->name('testuser.store');
+
 
 
 
