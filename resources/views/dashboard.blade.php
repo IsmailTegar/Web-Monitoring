@@ -8,11 +8,12 @@
         <header class="div">
           <h1 class="text-wrapper">Dashboard</h1>
           <p class="text-wrapper-2">Mikrotik Name : {{ $identitas }}</p>
+          <p class="text-wrapper-2">IP Address : {{ $ip }}</p>
         </header>
         <div class="page-inner mt--5">
           <div class="row">
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                  <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -23,8 +24,8 @@
                               <div class="col col-stats ml-3 ml-sm-0">
                                   <div class="numbers">
                                       <p class="card-category">Info</p>
-                                      <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
-                                      <b> OS : {{ $version }}</b>
+                                      {{-- <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
+                                      <b> OS : {{ $version }}</b> --}}
                                   </div>
                               </div>
                           </div>
@@ -33,7 +34,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="#" style="text-decoration:none" >
-                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                      <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -54,7 +55,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="" style="text-decoration:none" >
-                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                      <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -74,7 +75,7 @@
                   </a>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                  <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body ">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -93,7 +94,7 @@
                   </div>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                  <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -114,7 +115,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="#" style="text-decoration:none" >
-                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                      <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -135,7 +136,7 @@
               </div>
               <div class="col-sm-6 col-md-3">
                   <a href="" style="text-decoration:none" >
-                      <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                      <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                           <div class="card-body">
                               <div class="row align-items-center">
                                   <div class="col-icon">
@@ -155,7 +156,7 @@
                   </a>
               </div>
               <div class="col-sm-6 col-md-3">
-                  <div class="card card-stats card-round" style="border-bottom-color: blue; border-bottom-width: 3px">
+                  <div class="card card-stats card-round hover-card" style="border-bottom-color: blue; border-bottom-width: 3px">
                       <div class="card-body">
                           <div class="row align-items-center">
                               <div class="col-icon">
@@ -208,7 +209,7 @@
                     <div class="card-body">
                         <div class="px-2 pb-2 pb-md-0 text-center">
                             <div id="circles-1"></div>
-                            <h6 class="fw-bold mt-3 mb-0">New Users</h6>
+                            <h6 class="fw-bold mt-3 mb-0">CPU</h6>
                         </div>
                     </div>
                   </div>

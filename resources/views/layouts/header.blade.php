@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>FULLROT - Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="{{ asset('template-dashboard') }}/assets/img/icon.ico" type="image/x-icon"/>
+	{{-- <link rel="icon" href="{{ asset('template-dashboard') }}/assets/img/icon.ico" type="image/x-icon"/> --}}
 	<link rel="stylesheet" href="{{ asset('css/appdashboard.css') }}">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -139,7 +139,7 @@
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#">Account Setting</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="/">Logout</a>
+										<a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
 									</li>
 								</div>
 							</ul>

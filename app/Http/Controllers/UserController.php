@@ -33,7 +33,7 @@ class UserController extends Controller
 
         } else {
 
-            return redirect('failed');
+           return redirect()->route('failed');
         }
     }
 

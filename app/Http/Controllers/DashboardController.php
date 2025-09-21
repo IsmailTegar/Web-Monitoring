@@ -26,7 +26,7 @@ class DashboardController extends Controller
             $routerboard = $API->comm('/system/routerboard/print');
 
         } else {
-            return view('failed');
+            return redirect()->route('failed');
         }
 
         $data = [
@@ -42,11 +42,17 @@ class DashboardController extends Controller
             'boardname' => $resource[0]['board-name'],
             'freememory' => $resource[0]['free-memory'],
             'freehdd' => $resource[0]['free-hdd-space'],
-            'model' => $routerboard[0]['model'],
+            'ip' => $ip,
+            // 'model' => $routerboard[0]['model'],
         ]; 
 
 
         return view('dashboard', $data);
+    }
+
+    public function failed()
+    {
+        return view('failed');
     }
 
     public function cpu()
@@ -60,7 +66,7 @@ class DashboardController extends Controller
         if($API->connect($ip , $user , $pass)) {
             $cpu = $API->comm('/system/resource/print');
         } else {
-            return view('failed');
+            return view('-');
         }
 
         $data = [
@@ -73,6 +79,9 @@ class DashboardController extends Controller
 
         public function uptime()
     {
+
+        if (! request()->ajax()) abort(403);
+
         $ip = session()->get('ip');
         $user = session()->get('user');
         $pass = session()->get('pass');
@@ -82,7 +91,7 @@ class DashboardController extends Controller
         if($API->connect($ip , $user , $pass)) {
             $uptime = $API->comm('/system/resource/print');
         } else {
-            return view('failed');
+            return view('-');
         }
 
         $data = [
@@ -111,7 +120,7 @@ class DashboardController extends Controller
             $rx = $traffic[0]['rx-bits-per-second'];
             $tx = $traffic[0]['tx-bits-per-second'];
         } else {
-            return view('failed');
+            return view('-');
         }
 
         $data = [
@@ -123,6 +132,7 @@ class DashboardController extends Controller
 
     }
 
+    
 
 }
 

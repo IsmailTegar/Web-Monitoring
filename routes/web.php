@@ -10,15 +10,19 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\testuser;
 use App\Http\Controllers\UserActive;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/failed', function () {
-    return view('failed');
-});
 
 //LOGIN
 Route::get('/', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login.post');
+
+//LOGOUT
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+//FAILED
+Route::get('failed', [AuthController::class, 'failed'])->name('failed');
 
 //DASHBOARD
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

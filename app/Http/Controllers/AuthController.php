@@ -34,4 +34,12 @@ class AuthController extends Controller
         return redirect()->route('dashboard');
         
     }
+
+    public function logout(Request $request)
+    {
+        $request->session()->forget(['ip', 'user', 'pass']);
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login');
+    }
 }
