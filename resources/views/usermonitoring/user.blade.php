@@ -7,11 +7,15 @@
         <div class="container-content">
             <main class="frame">
                 <div class="card">
-                    <div class="card-body" style="width: 1100px">
+                    <div class="card-body" style="width: 1200px">
                         <div>
                             <h3 class="text-black pb-2 fw-bold">User Monitoring</h3>
                         </div>
-                        <div id="table1"></div>
+                        <div class="table-responsive">
+                           <table id="add-row" class="display table table-striped table-hover">
+                            <div id="table1">
+                           </table>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -19,7 +23,7 @@
     </div>
 </div>
 
-{{-- <script>
+<script>
     function loadData() {
         $.get('/testuser', function (data) {
             console.log(data); // lihat di console browser
@@ -35,7 +39,7 @@
     // ulang tiap 30 detik
     setInterval(loadData, 30000);
 
-</script> --}}
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -59,7 +63,7 @@
     // Refresh setiap 30 detik, pakai url terakhir
     setInterval(function() {
         loadTable1();
-    }, 30000);
+    }, 2000);
 </script>
 
 

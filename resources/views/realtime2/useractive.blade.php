@@ -1,6 +1,4 @@
 
-<div class="table-responsive">
-    <table id="add-row" class="display table table-striped table-hover">
         <thead>
             <tr>
                 <th>No</th>
@@ -12,6 +10,7 @@
                 <th>Upload</th>
                 <th>Download</th>
                 <th>Status</th>
+                <th>Updated At</th>
             </tr>
         </thead>
         <tfoot>
@@ -25,15 +24,16 @@
                 <th>Upload</th>
                 <th>Download</th>
                 <th>Status</th>
+                <th>Updated At</th>
             </tr>
         </tfoot>
         <tbody>
-            @foreach ($users as $log)
+            @foreach ($users as $index => $log)
             <tr>
-                <td>{{ $log->id }}</td>
+                <td>{{ $index + 1 }}</td>
                 <td>{{ $log->username }}</td>
                 <td>{{ $log->ip_address }}</td>
-                <td>{{ $log->desination }}</td>
+                <td>{{ $log->destination }}</td>
                 <td>{{ $log->login_time }}</td>
                 <td>{{ $log->uptime }}</td>
                 <td>{{ $log->bytes_in }}</td>
@@ -44,5 +44,6 @@
             @endforeach
         </tbody>
     </table>
-    {{ $users->links('pagination::bootstrap-4') }}
+
 </div>
+

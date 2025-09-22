@@ -72,8 +72,10 @@
 
 		$(document).ready(function() {
 			$('#add-row').DataTable({
-				"paging": true, // Aktifkan pagination
-				"pageLength": 10 // Jumlah baris per halaman
+				"paging": true, 
+				"pageLength": 10,
+				"ordering": true, 
+                "searching": true
 			});
 		});
 
