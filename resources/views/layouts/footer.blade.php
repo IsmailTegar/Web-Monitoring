@@ -142,5 +142,16 @@
 			fillColor: 'rgba(255, 165, 52, .14)'
 		});
 	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			let current = window.location.pathname; 
+			document.querySelectorAll(".nav-item a").forEach(link => {
+				if (link.getAttribute("href") === current) {
+				link.parentElement.classList.add("active");
+				}
+			});
+		});
+	</script>
+
 </body>
 </html>

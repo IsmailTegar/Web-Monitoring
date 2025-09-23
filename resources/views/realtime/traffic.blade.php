@@ -1,5 +1,7 @@
 Status Traffic Upload (RX) = {{ formatBytes($rx, 2) }}<br>
 Status Traffic Download (TX) = {{ formatBytes($tx, 2) }}<br>
+{{-- Total Upload (RX) = {{ formatBytes($rx_total, 2) }}<br>
+Total Download (TX) = {{ formatBytes($tx_total, 2) }}<br> --}}
 
 @php function formatBytes($bytes, $decimal = null){
     $satuan = ['Bytes', 'Kb', 'Mb', 'Gb', 'Tb'];

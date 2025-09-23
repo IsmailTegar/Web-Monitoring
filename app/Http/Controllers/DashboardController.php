@@ -119,6 +119,9 @@ class DashboardController extends Controller
 
             $rx = $traffic[0]['rx-bits-per-second'];
             $tx = $traffic[0]['tx-bits-per-second'];
+
+            
+
         } else {
             return view('-');
         }

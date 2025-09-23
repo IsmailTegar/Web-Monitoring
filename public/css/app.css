@@ -317,3 +317,10 @@ a {
     background: #e5e5e5;
     outline: none;
 }
+
+.nav-item .nav-link.active {
+    background: var(--secondary);
+    color: white !important;
+    border-radius: 10px;
+    text-decoration: none;
+}

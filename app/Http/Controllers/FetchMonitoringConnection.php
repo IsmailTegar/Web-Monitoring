@@ -16,7 +16,7 @@ class FetchMonitoringConnection extends Controller
         $API->debug('false');
 
         if ($API->connect($ip, $user, $password)) {
-            $connections = $API->comm('/ip/hotspot/active/print');
+            $connections = $API->comm('/ip/firewall/connection/print');
 
             $data = [
                 'connections' => $connections,

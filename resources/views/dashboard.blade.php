@@ -85,8 +85,8 @@
                               </div>
                               <div class="col col-stats ml-3 ml-sm-0">
                                   <div class="numbers">
-                                      <p class="card-category">CPU Load</p>
-                                      <h3 class="card-title" id="cpu"></h3>
+                                      <p class="card-category">Web Terblokir</p>
+                                      <h3 class="card-title">{{ $blocked_web }}</h3>
                                   </div>
                               </div>
                           </div>
@@ -243,8 +243,8 @@
 <script>
 
     function cpu() {
-        $('#cpu').load('{{ route('dashboard.cpu') }}', function() {
-            let cpuVal = parseInt(document.getElementById('cpu').innerText) || 0;
+        $.get('{{ route('dashboard.cpu') }}', function(data) {
+            let cpuVal = parseInt(data) || 0;
             let warna;
             if(cpuVal < 40){
                 warna = '#28a745';
