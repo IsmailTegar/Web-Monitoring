@@ -11,11 +11,7 @@
                         <div>
                             <h3 class="text-black pb-2 fw-bold">User Monitoring</h3>
                         </div>
-                        <div class="table-responsive">
-                           <table id="add-row" class="display table table-striped table-hover">
-                            <div id="table1">
-                           </table>
-                        </div>
+                        <div id="table1"></div>
                     </div>
                 </div>
             </main>

@@ -31,7 +31,7 @@ class loop extends Command
     {
         try {
             while (true) {
-                Artisan::call('app:dummy');
+                Artisan::call('app:dummy2');
                 $this->info('Command app:dummy dijalankan ' . Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'));
                 sleep(10);
             }

@@ -30,34 +30,54 @@ class Dummy extends Command
          Connection::create([
             'username'   => 'tegar',
             'ip_address' => '192.168.88.2',
-            'destination'=> 'facebook.com',
-            'login_time' => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
+            // 'destination'=> 'facebook.com',
+            // 'login_time' => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
             'uptime'     => '00:15:23',
             'bytes_in'   => rand(1000, 5000),
             'bytes_out'  => rand(2000, 7000),
-            'status'     => 'active',
+            // 'status'     => 'active',
+        ]);
+         Connection::create([
+            'username'   => 'Kirito',
+            'ip_address' => '192.168.82.2',
+            // 'destination'=> 'facebook.com',
+            // 'login_time' => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
+            'uptime'     => '00:15:23',
+            'bytes_in'   => rand(1000, 5000),
+            'bytes_out'  => rand(2000, 7000),
+            // 'status'     => 'active',
+        ]);
+         Connection::create([
+            'username'   => 'Bahlil',
+            'ip_address' => '192.35.99.2',
+            // 'destination'=> 'facebook.com',
+            // 'login_time' => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
+            'uptime'     => '00:40:23',
+            'bytes_in'   => rand(1000, 5000),
+            'bytes_out'  => rand(2000, 7000),
+            // 'status'     => 'active',
         ]);
 
-        Connection::create([
-            'username'   => 'guest',
-            'ip_address' => '192.168.88.3',
-            'destination'=> 'google.com',
-            'uptime'     => '00:05:47',
-            'bytes_in'   => rand(1000, 5000),
-            'bytes_out'  => rand(2000, 7000),
-            'login_time'  => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
-            'status'     => 'active',
-        ]);
-        Connection::create([
-            'username'   => 'halo',
-            'ip_address' => '192.168.88.3',
-            'destination'=> 'google.com',
-            'uptime'     => '00:05:47',
-            'bytes_in'   => rand(1000, 5000),
-            'bytes_out'  => rand(2000, 7000),
-            'login_time'  => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
-            'status'     => 'active',
-        ]);
+        // Connection::create([
+        //     'username'   => 'guest',
+        //     'ip_address' => '192.168.88.3',
+        //     'destination'=> 'google.com',
+        //     'uptime'     => '00:05:47',
+        //     'bytes_in'   => rand(1000, 5000),
+        //     'bytes_out'  => rand(2000, 7000),
+        //     'login_time'  => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
+        //     'status'     => 'active',
+        // ]);
+        // Connection::create([
+        //     'username'   => 'halo',
+        //     'ip_address' => '192.168.88.3',
+        //     'destination'=> 'google.com',
+        //     'uptime'     => '00:05:47',
+        //     'bytes_in'   => rand(1000, 5000),
+        //     'bytes_out'  => rand(2000, 7000),
+        //     'login_time'  => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s'),
+        //     'status'     => 'active',
+        // ]);
 
         $this->info('Dummy data inserted!');
     }

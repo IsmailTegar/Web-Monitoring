@@ -1,4 +1,6 @@
 
+<div class="table-responsive">
+    <table id="add-row" class="display table table-striped table-hover">
         <thead>
             <tr>
                 <th>No</th>
@@ -44,6 +46,5 @@
             @endforeach
         </tbody>
     </table>
-
 </div>
 

@@ -15,16 +15,15 @@ class monitoring extends Controller
     public function table1(){
 
         $sub = Connection::select('username')
-        ->selectRaw('MAX(login_time) as latest_login')
-        ->where('status', 'active')
+        ->selectRaw('MAX(id) as latest_id')
         ->groupBy('username');
 
-        $users = Connection::joinSub($sub, 'latest', function($join) {
+        $users = Connection::joinSub($sub, 'latest', function ($join) {
             $join->on('mikrotik_users.username', '=', 'latest.username')
-                 ->on('mikrotik_users.login_time', '=', 'latest.latest_login');
-        })->orderBy('login_time', 'desc')
-          ->paginate(10);
-        
+                ->on('mikrotik_users.id', '=', 'latest.latest_id');
+            })
+            ->orderBy('id', 'desc')
+            ->paginate(10);
 
         return view('realtime2.useractive', compact('users'));
     }
