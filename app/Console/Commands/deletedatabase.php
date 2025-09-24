@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Connection as ModelsConnection;
+use App\Models\ConnectionHistory;
 use Dba\Connection;
 use Illuminate\Console\Command;
 
@@ -28,6 +29,8 @@ class deletedatabase extends Command
     public function handle()
     {
         ModelsConnection::truncate();
+        $this->info('Tabel dikosongkan');
+        ConnectionHistory::truncate();
         $this->info('Tabel dikosongkan');
     }
 }
