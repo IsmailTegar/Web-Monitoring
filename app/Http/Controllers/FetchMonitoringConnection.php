@@ -18,6 +18,15 @@ class FetchMonitoringConnection extends Controller
         $API->debug('false');
 
         if ($API->connect($ip, $user, $password)) {
+
+             $dstAddress = $conn['dst-address'] ?? null;
+            $dstIp = null;
+            $dstPort = null;
+
+            if ($dstAddress && strpos($dstAddress, ':') !== false) {
+                [$dstIp, $dstPort] = explode(':', $dstAddress, 2);
+            }
+
             $connections = $API->comm('/ip/firewall/connection/print');
 
              foreach ($connections as $conn) {
@@ -48,6 +57,8 @@ class FetchMonitoringConnection extends Controller
                     'fasttrack'         => isset($conn['fasttrack']) ? filter_var($conn['fasttrack'], FILTER_VALIDATE_BOOLEAN) : false,
                     'srcnat'            => isset($conn['srcnat']) ? filter_var($conn['srcnat'], FILTER_VALIDATE_BOOLEAN) : false,
                     'dstnat'            => isset($conn['dstnat']) ? filter_var($conn['dstnat'], FILTER_VALIDATE_BOOLEAN) : false,
+                    'dst_ip'            => $dstIp, 
+                    'port'              => $dstPort,
                     ]);
                 }
 
