@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FetchMonitoring;
 use App\Http\Controllers\FetchMonitoringConnection;
 use App\Http\Controllers\FirewallController;
+use App\Http\Controllers\KidControlController;
 use App\Http\Controllers\Monitoring;
 use App\Http\Controllers\PPPoEController;
 use App\Http\Controllers\ReportController;
@@ -56,6 +57,7 @@ Route::get('down', [ReportController::class, 'down'])->name('down');
 Route::get('Monitoring-User', [Monitoring::class, 'index'])->name('usermonitoring.user');
 Route::get('Monitoring-User/table1', [Monitoring::class, 'table1'])->name('monitoring.table1');
 Route::get('testuser', [FetchMonitoring::class, 'index'])->name('testuser.store');
+Route::get('kidcontrol', [KidControlController::class, 'index'])->name('kidcontrol.index');
 
 //USER HISTORY
 route::get('userhistory', [FetchMonitoringConnection::class, 'index'])->name('userhistory');
