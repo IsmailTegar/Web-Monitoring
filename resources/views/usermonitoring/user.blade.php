@@ -73,11 +73,10 @@
     var currentUrl = '{{ route('kidcontrol.index') }}';
 
     function initTable() {
-        // kalau tabel sudah pernah diinisialisasi, destroy dulu
+        // pastikan gak dobel inisialisasi
         if ($.fn.DataTable.isDataTable('#add-row')) {
             $('#add-row').DataTable().destroy();
         }
-        // baru inisialisasi ulang
         $('#add-row').DataTable({
             pageLength: 10,
             order: [[0, 'asc']],
@@ -86,26 +85,35 @@
 
     function loadTable1(url = null) {
         if (url) currentUrl = url;
+
+        // ambil posisi scroll horizontal sebelum konten diganti
+        var scrollPos = $('#kidcontrol .table-responsive').scrollLeft();
+
+        // load ulang tabel via AJAX
         $('#kidcontrol').load(currentUrl, function() {
-            initTable(); // inisialisasi setelah load selesai
+            initTable(); // aktifkan DataTables lagi
+
+            // balikin posisi scroll setelah load selesai
+            $('#kidcontrol .table-responsive').scrollLeft(scrollPos);
         });
     }
 
-    // pertama kali
+    // load pertama kali
     loadTable1();
 
-    // delegasi klik pagination
+    // event pagination
     $(document).on('click', '#kidcontrol .pagination a', function(e) {
         e.preventDefault();
         var url = $(this).attr('href');
         loadTable1(url);
     });
 
-    // refresh otomatis (boleh kamu naikkan ke 10–30 detik, 2 detik terlalu sering)
+    // auto-refresh tiap 10 detik (ganti 10000 jadi 30000 kalau mau lebih ringan)
     setInterval(function() {
         loadTable1();
-    }, 60000);
+    }, 10000);
 </script>
+
 
 
 @endsection

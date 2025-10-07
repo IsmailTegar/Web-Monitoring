@@ -53,7 +53,7 @@ class UserController extends Controller
 
         if ($API->connect($ip, $user, $password)) {
             $API->comm('/ip/hotspot/user/add', [
-
+   
                 'name' => $request['user'],
                 'password' => $request['password'],
                 'server' => $request['server'],

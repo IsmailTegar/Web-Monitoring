@@ -24,8 +24,8 @@
                               <div class="col col-stats ml-3 ml-sm-0">
                                   <div class="numbers">
                                       <p class="card-category">Info</p>
-                                      {{-- <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
-                                      <b> OS : {{ $version }}</b> --}}
+                                      <b> Model :</b> {{ $model }} / ({{ $boardname }})<br>
+                                      <b> OS : {{ $version }}</b>
                                   </div>
                               </div>
                           </div>

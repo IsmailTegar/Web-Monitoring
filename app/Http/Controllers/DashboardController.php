@@ -43,7 +43,7 @@ class DashboardController extends Controller
             'freememory' => $resource[0]['free-memory'],
             'freehdd' => $resource[0]['free-hdd-space'],
             'ip' => $ip,
-            // 'model' => $routerboard[0]['model'],
+            'model' => $routerboard[0]['model'],
         ]; 
 
 
